@@ -379,6 +379,7 @@ public class Client extends BigBlueButtonActivity implements
 		}
 
 		boolean connected = getBigBlueButton().connectBigBlueButton();
+		System.out.println("bigblutbutton is connected:" + connected);
 		if (!connected) {
 			showJoinFailDialog(new JoinFailDialog(this));
 			return false;

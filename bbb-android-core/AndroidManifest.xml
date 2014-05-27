@@ -20,7 +20,7 @@
 	<supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" />
 
 	
-	<uses-sdk android:minSdkVersion="5" />
+	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="19"/>
 
 
 </manifest> 

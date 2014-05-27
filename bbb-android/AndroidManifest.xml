@@ -3,7 +3,7 @@
       package="org.mconf.android.bbbandroid"
       android:versionCode="13"
       android:versionName="0.4.8">
-    <uses-sdk android:minSdkVersion="5" />
+    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="19"/>
 
 	<uses-feature android:name="android.hardware.camera" android:required="false" />
 	<uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />

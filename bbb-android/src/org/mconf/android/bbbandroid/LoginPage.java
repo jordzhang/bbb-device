@@ -45,14 +45,15 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.StrictMode;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup.LayoutParams;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -60,9 +61,9 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.Spinner;
 import android.widget.Toast;
-import android.widget.RadioGroup.OnCheckedChangeListener;
 //page where the user chooses the room, the name, and connects to a conference
 public class LoginPage extends BigBlueButtonActivity {
 	
@@ -144,6 +145,19 @@ public class LoginPage extends BigBlueButtonActivity {
 			}
 		});
 
+		StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()  
+        .detectDiskReads()  
+        .detectDiskWrites()  
+        .detectNetwork()   // or .detectAll() for all detectable problems  
+        .penaltyLog()  
+        .build());  
+		StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()  
+		        .detectLeakedSqlLiteObjects()  
+		        .detectLeakedClosableObjects()  
+		        .penaltyLog()  
+		        .penaltyDeath()  
+		        .build());  
+		
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
 			@Override

@@ -217,6 +217,7 @@ public class LoginPage extends BigBlueButtonActivity {
 						String path = null;
 						try {
 							path = mconf.getJoinUrl(auth, selectedRoom.getPath());
+							System.out.println("joinPath:" + path);
 						} catch (Exception e) {
 							progressDialog.dismiss();
 							if (selectedRoom.getOwner().getClass() == Space.class
