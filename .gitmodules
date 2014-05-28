@@ -1,9 +1,0 @@
-[submodule "sipdroid"]
-	path = sipdroid
-	url = git://github.com/mconf/sipdroid.git
-[submodule "flazr"]
-	path = flazr
-	url = git://github.com/mconf/flazr.git
-[submodule "bbb-java"]
-	path = bbb-java
-	url = git://github.com/mconf/bbb-java.git
