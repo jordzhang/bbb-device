@@ -15,3 +15,4 @@ proguard-project.txt
 *.orig
 local.properties
 mconf.keystore
+flazr/target
